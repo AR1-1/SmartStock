@@ -1,0 +1,96 @@
+/* Main container styling */
+.notification-container {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9; /* Light background color for the container */
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Each notification item styling */
+.notification-item {
+    margin-bottom: 15px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.notification-item:hover {
+    background-color: #f1f1f1; /* Light hover effect */
+}
+
+/* Styling for the notification message */
+.notification-message {
+    font-size: 16px;
+    color: red; /* Default color for general notifications */
+    max-width: 80%;
+    word-wrap: break-word;
+}
+
+/* Notification type-specific message */
+.notification-message.expiry {
+    color: #ff6347; /* Tomato red for expiry notifications */
+    font-weight: bold;
+}
+
+.notification-message.low-stock {
+    color: #ffcc00; /* Yellow for low stock notifications */
+}
+
+.notification-message.marking {
+    color: green; /* Green when marking as read */
+}
+
+/* Button styling */
+button {
+    padding: 5px 10px;
+    background-color: #4CAF50; /* Green button */
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+/* Styling for error and success messages */
+.error {
+    color: red;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.success {
+    color: green;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Styling for loading state */
+.loading {
+    font-size: 18px;
+    color: #333;
+    font-style: italic;
+}
+
+/* Add a class for unread notifications that have expired */
+.notification-item.expiry {
+    border-left: 5px solid #ff6347; /* Add a left border to highlight expiry notifications */
+}
+
+.notification-item.low-stock {
+    border-left: 5px solid #ffcc00; /* Add a left border to highlight low-stock notifications */
+}
